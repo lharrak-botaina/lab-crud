@@ -18,7 +18,7 @@ class type_handicapController extends Controller
      */
     public function index()
     {
-        $data = type_handicap::paginate(2);
+        $data = type_handicap::all();
         return view('type handicap.index',compact('data'));
     }
 
