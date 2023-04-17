@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProjetController;
 use App\Http\Controllers\type_handicapController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::resource('typeHandicap', type_handicapController::class);
+Route::resource('project', ProjetController::class);

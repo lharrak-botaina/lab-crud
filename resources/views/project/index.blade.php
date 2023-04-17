@@ -9,7 +9,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Type handicap</h1>
+                    <h1 class="m-0">Gestion des projects</h1>
                 </div><!-- /.col -->
 
             </div><!-- /.row -->
@@ -25,7 +25,7 @@
                 <div class="card-header">
                     <div class="col-sm-12 d-flex justify-content-between p-0">
                         <div class="d-flex justify-content-between">
-                            <a href="{{route('typeHandicap.create')}}" class="btn btn-primary"><i
+                            <a href="{{route('project.create')}}" class="btn btn-primary"><i
                                     class="fa-solid fa-plus"></i></a>
                         </div>
                         <!-- SEARCH FORM -->
@@ -37,7 +37,7 @@
                         <thead>
                             <tr>
                                 <th style="width: 100px">Id</th>
-                                <th style="width: 400px">Type handicap</th>
+                                <th style="width: 400px">projects</th>
                                 <th>Description</th>
                             </tr>
                         </thead>
@@ -53,18 +53,18 @@
 
 
                 <td class="project-actions text-right">
-                    <a class="btn btn-primary btn-sm" href="{{route('typeHandicap.show',$value->id)}}">
+                    <a class="btn btn-primary btn-sm" href="{{route('project.show',$value->id)}}">
                         <i class="fas fa-folder">
                         </i>
                         Afficher
                     </a>
-                    <a class="btn btn-info btn-sm" href="{{route('typeHandicap.edit',$value->id)}}">
+                    <a class="btn btn-info btn-sm" href="{{route('project.edit',$value->id)}}">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Modifier
                     </a>
                     <form class style="display: contents"
-                        action="{{route('typeHandicap.destroy',$value->id)}}" method="post">
+                        action="{{route('project.destroy',$value->id)}}" method="post">
                         @csrf
                         @method("DELETE")
                         <button class="btn btn-danger btn-sm" href="#">

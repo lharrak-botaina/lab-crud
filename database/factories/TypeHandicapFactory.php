@@ -16,8 +16,10 @@ class TypeHandicapFactory extends Factory
      */
     public function definition()
     {
-        return [
-            //
-        ];
+        // return [
+
+        //         'nom'=>$this->faker->name()
+
+        // ];
     }
 }

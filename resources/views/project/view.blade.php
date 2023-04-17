@@ -27,7 +27,7 @@
             <!-- general form elements -->
             <div class="card card-secondary card-create">
               <div class="card-header">
-                <h3 class="card-title">Afficher type Handicap</h3>
+                <h3 class="card-title">Afficher projects</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -37,7 +37,7 @@
 
                   <div class="card card-secondary card-outline">
                     <div class="card-header">
-                      <h5 class="card-title m-0">type handicap</h5>
+                      <h5 class="card-title m-0">projects</h5>
                     </div>
                     <div class="card-body">
 
@@ -66,11 +66,11 @@
                 <div class="card-footer">
                     <div class="d-flex">
                         <div class="p-2">
-                            <a href="{{route('typeHandicap.edit',$type_handicap->id)}}" type="submit" class="btn btn-warning">Editer</a>
+                            <a href="{{route('project.edit',$type_handicap->id)}}" type="submit" class="btn btn-warning">Editer</a>
                         </div>
 
                         <div class="ml-auto p-2">
-                            <a href="{{route('typeHandicap.index')}}" type="submit" class="btn btn-secondary">Anuler</a>
+                            <a href="{{route('project.index')}}" type="submit" class="btn btn-secondary">Anuler</a>
                         </div>
                       </div>
 

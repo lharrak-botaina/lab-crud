@@ -2,24 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Exports\exportTypeHandicap;
-use App\Imports\importTypeHandicap;
-use App\Models\type_handicap;
+use App\Models\Projet;
 use Illuminate\Http\Request;
-use Maatwebsite\Excel\Facades\Excel;
-use Illuminate\Support\Facades\DB;
 
-class type_handicapController extends Controller
+class ProjetController extends Controller
 {
-    /**
+   /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $data = type_handicap::all();
-        return view('type handicap.index',compact('data'));
+        $data = Projet::all();
+        return view('project.index',compact('data'));
     }
 
     /**
@@ -29,7 +25,7 @@ class type_handicapController extends Controller
      */
     public function create()
     {
-        return view('type handicap.create');
+        return view('project.create');
 
     }
 
@@ -46,11 +42,11 @@ class type_handicapController extends Controller
             'description' => 'required|string',
         ]);
 
-        $type_handicap = new type_handicap;
+        $type_handicap = new Projet;
         $type_handicap->nom = $request->type_handicap;
         $type_handicap->description = $request->description;
         $type_handicap->save();
-        return redirect('typeHandicap');
+        return redirect('project');
     }
 
     /**
@@ -61,8 +57,8 @@ class type_handicapController extends Controller
      */
     public function show($id)
     {
-        $type_handicap = type_handicap::find($id);
-        return view('type handicap.view',compact('type_handicap'));
+        $type_handicap = Projet::find($id);
+        return view('project.view',compact('type_handicap'));
     }
 
     /**
@@ -73,8 +69,8 @@ class type_handicapController extends Controller
      */
     public function edit($id)
     {
-        $type_handicap = type_handicap::find($id);
-        return view('type handicap.edit',compact('type_handicap'));
+        $type_handicap = Projet::find($id);
+        return view('project.edit',compact('type_handicap'));
     }
 
     /**
@@ -89,11 +85,11 @@ class type_handicapController extends Controller
             'type_handicap' => 'required|string',
             'description' => 'required|string',
         ]);
-        $type_handicap =type_handicap::find($id);
+        $type_handicap =Projet::find($id);
         $type_handicap->nom = $request->type_handicap;
         $type_handicap->description = $request->description;
         $type_handicap->save();
-        return redirect('typeHandicap');
+        return redirect('project');
     }
 
     /**
@@ -104,8 +100,7 @@ class type_handicapController extends Controller
      */
     public function destroy($id)
     {
-        $delete = type_handicap::find($id)->delete();
-        return redirect('typeHandicap');
+        $delete = Projet::find($id)->delete();
+        return redirect('project');
     }
-
 }
